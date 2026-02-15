@@ -1,0 +1,143 @@
+/* Header.css - Refactored as Sidebar */
+.app-header {
+    width: 260px;
+    height: 100vh;
+    background: var(--color-sidebar);
+    padding: var(--space-lg) var(--space-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 0;
+    position: relative;
+    z-index: 100;
+    box-shadow: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-xl);
+}
+
+.app-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: white;
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--space-md);
+}
+
+/* New OpenDoor Logo Styles */
+.logo-circle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-circle {
+    width: 32px;
+    height: 32px;
+    background-color: #5d8aff;
+    /* Matches the blue in the logo */
+    border-radius: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.logo-buildings {
+    display: flex;
+    align-items: flex-end;
+    gap: 1px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-buildings>div {
+    background: #000;
+}
+
+.b-1 {
+    width: 6px;
+    height: 12px;
+}
+
+.b-2 {
+    width: 8px;
+    height: 20px;
+}
+
+.b-3 {
+    width: 6px;
+    height: 14px;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    width: 100%;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.nav-item.active {
+    background: var(--color-primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(21, 101, 216, 0.2);
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-top: auto;
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.env-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-success);
+    box-shadow: 0 0 0 2px var(--color-success-bg);
+}

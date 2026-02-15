@@ -1,0 +1,142 @@
+:root {
+  /* HSL Color Palette - Zoho-inspired Premium Feel */
+  --hue-primary: 215;
+  /* Deep Professional Blue */
+  --hue-success: 155;
+  /* Balanced Green */
+  --hue-warning: 38;
+  /* Warm Amber */
+  --hue-danger: 4;
+  /* Crisp Red */
+  --hue-info: 210;
+  /* Sky Blue */
+
+  /* Surface Colors */
+  --color-bg-app: #f4f7f9;
+  /* Zoho-style light blue-gray background */
+  --color-surface: #ffffff;
+  --color-surface-hover: #f8fafc;
+  --color-sidebar: #1e293b;
+  /* Deep Navy for sidebars/headers */
+
+  /* Text Colors */
+  --color-text-primary: #1e293b;
+  --color-text-secondary: #64748b;
+  --color-text-tertiary: #94a3b8;
+
+  /* Brand Colors */
+  --color-primary: #1565d8;
+  /* Distinct Zoho Blue */
+  --color-primary-dark: #004fb0;
+  --color-primary-light: #e0e7ff;
+  --color-accent: #ff9800;
+  /* Premium Gold/Orange */
+  --color-accent-light: #fff7ed;
+
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-success-bg: #ecfdf5;
+  --color-warning: #f59e0b;
+  --color-warning-bg: #fffbeb;
+  --color-danger: #ef4444;
+  --color-danger-bg: #fef2f2;
+
+  /* Glassmorphism Variables */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  --glass-backdrop: blur(12px);
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Borders */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --border-subtle: 1px solid hsl(220, 20%, 92%);
+
+  /* Animations */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* Global OpenDoor Logo Styles */
+.logo-circle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-circle {
+  width: 32px;
+  height: 32px;
+  background-color: #5d8aff;
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.logo-buildings {
+  display: flex;
+  align-items: flex-end;
+  gap: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-buildings>div {
+  background: #000;
+}
+
+.b-1 {
+  width: 6px;
+  height: 12px;
+}
+
+.b-2 {
+  width: 8px;
+  height: 20px;
+}
+
+.b-3 {
+  width: 6px;
+  height: 14px;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+/* Serif font style for the logo text to match the reference */
+.logo-text-serif {
+  font-family: 'Georgia', serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #1a1a1a;
+}
+
+/* Dark Mode Support (Future-proofing) */
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    --color-bg-app: hsl(220, 30%, 8%);
+    --color-surface: hsl(220, 25%, 12%);
+    --color-text-primary: hsl(220, 10%, 95%);
+    --color-text-secondary: hsl(220, 15%, 70%);
+    --border-subtle: 1px solid hsl(220, 20%, 20%);
+  } */
+}
