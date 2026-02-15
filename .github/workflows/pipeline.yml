@@ -1,0 +1,44 @@
+name: OpenDoor CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+
+    - name: Install Frontend Dependencies
+      run: npm install
+
+    - name: Build Frontend
+      run: npm run build
+      env:
+        # These are dummy values for the build process to avoid errors
+        VITE_GROQ_API_KEY: ${{ secrets.VITE_GROQ_API_KEY }}
+        VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+        VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+
+    - name: Install Backend Dependencies
+      run: |
+        cd backend
+        npm install
+
+    - name: Test Suite (Placeholder)
+      run: |
+        # In a real project, you would run 'npm test' here
+        echo "Running automated tests..."
+
+    - name: Security Audit
+      run: npm audit --audit-level=high
